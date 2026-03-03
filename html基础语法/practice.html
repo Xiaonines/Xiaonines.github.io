@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <!--meta元素，用于提供网页元数据，包括作者、描述、关键词、viewport、字符集、以及其他相关信息-->
+    <!--部分网站有其自己特定的元数据类型-->
+    <title>Practice</title>
+    <!--title元素，设置了页面标题，会出现在侧栏标签页标题，收藏书签中-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--name属性用来指定meta元素的类型，说明该元素包含了什么信息，content指定了该元素的具体内容-->
+    <meta
+  name="description"
+  content="The MDN Web Docs site
+  provides information about Open Web technologies
+  including HTML, CSS, and APIs for both Web sites and
+  progressive web apps." />
+    <!--description meta元素，用于提供网页的简短描述，description<meat>元素和<title>元素都会出现在搜索结果中-->
+</head>
+<!--head元素-->
+<body><!-- 页面内容 -->
+    <h1>This is a heading.</h1><!-- 标题 -->
+    <p>This is a paragraph.</p><!-- 段落 -->
+    <p>
+        <em>This is an emphasized text.</em><!-- 斜体字 -->
+        <strong>This is a strong text.</strong><!-- 粗体字 -->
+        <a href="https://www.google.com">This is a link to Google.</a><!-- 超链接 -->
+        <img src="../images/end.png" alt="This is an image." width="1920" height="1080"/><!-- 图片 --> 
+        <!--空元素，只有一个标签，用于在文档中插入/嵌入某些东西-->
+    </p>
+    <!-- 元素可以包含属性，属性包含元素的额外信息但不会出现在内容中 -->
+    <p calss="note"></p><!-- class（类）属性是一个标识名称，用于通过样式信息来定位元素  -->
+    <!--属性格式：属性名（class）=属性值（"note"），不同属性、元素名直接要用分隔符隔开-->
+    <!--属性值某些情况下允许不含引号，但某些情况下回破坏属性结构，一直包含引号可以解决上述问题-->
+    <!--包裹属性值的引号可以是单引号也可以是双引号，无区别，但不能混合使用。使用一直类型的引号时，属性值内部可以包含另一种类型的引号-->
+    <!--要在引号内包含相同类型的引号需要使用字符引用，实现转义，如&quot;转义为"，&amp;转义为&，&lt;转义为<，&gt;转义为>-->
+    <figure class="table-container"><table>
+    <thead>
+    <tr>
+    <th>字面字符</th>
+    <th>字符引用等效项</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>&lt;</td>
+    <td><code>&amp;lt;</code></td>
+    </tr>
+    <tr>
+    <td>&gt;</td>
+    <td><code>&amp;gt;</code></td>
+    </tr>
+    <tr>
+    <td>"</td>
+    <td><code>&amp;quot;</code></td>
+    </tr>
+    <tr>
+    <td>'</td>
+    <td><code>&amp;apos;</code></td>
+    </tr>
+    <tr>
+    <td>&amp;</td>
+    <td><code>&amp;amp;</code></td>
+    </tr>
+    </tbody>
+    </table></figure>
+    <p>狗狗很 可爱</p>
+    <p>狗狗    很
+         可
+         爱</p><!--html解析器在渲染代码时会将所有分隔符缩减至单个空格-->
+    <h6>换行技巧</h6>
+    <p>1.&lt;p&gt;等块级元素自动占一行，不同元素间会换行</p>
+    <p>2.使用空元素&lt;br&gt;或&lt;br/&gt;<br>
+    3.用辅助换行标签：建议换行点：<wbr>标签，当一个长单词或URl过长时浏览器可以在此处断开换行<br>
+    软连字符&shy;：作用与<wbr>相同，断开换行时会加一个连字符</p>
+    <p>this is a<strong> nested</strong> paragraph.</p><!-- 嵌套段落,元素可以嵌套在别的元素内部 -->
+    <input type="text" disabeled/>
+    <!-- 输入框，disabeled属性用于禁用输入框 -->
+    <!--disabled是一个布尔属性，只要出现在元素标签里值为真，反之为假，即使定义disabled="flase"-->
+    <!--布尔元素的三种定义方式：只写属性名disabled、属性名="任意值"、属性名、属性名=""-->
+    description&lt;meat&gt;元素和&lt;title&gt;元素都会出现在搜索结果中
+    <img src="../images/mdn-search-result.png" alt="MDN search result." width="800" height="400"/>
+</body>
+</html>
+<!--html元素，也称为根元素，包含页面上所有的内容-->
