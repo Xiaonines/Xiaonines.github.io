@@ -15,10 +15,20 @@
   including HTML, CSS, and APIs for both Web sites and
   progressive web apps." />
     <!--description meta元素，用于提供网页的简短描述，description<meat>元素和<title>元素都会出现在搜索结果中-->
+    <link rel="icon" href="../images/icon.jpg" type="image/png"/>
+    <!--link元素，用于链接到外部资源，rel属性指定了链接的类型，href属性指定了链接的地址，type属性指定了链接的资源类型-->
+    <link rel="stylesheet" href="style.css" />
+    <!--link元素，用于链接到外部样式表，rel属性指定了样式表的类型，href属性指定了样式表的路径地址-->
+    <script src="script.js" defer></script>
+    <!--script元素，用于包含客户端脚本，src属性指定了脚本的路径地址，defer属性指定了脚本的执行顺序，defer表示脚本的执行要延迟到html文档解析完成后再执行javascript-->
+
 </head>
 <!--head元素-->
 <body><!-- 页面内容 -->
     <h1>This is a heading.</h1><!-- 标题 -->
+    <!--h1元素时一个语义元素，所包裹的文本具有“页面上的顶级标题”作用。该语义值将以多种方式使用，比如搜索引擎关键字检索和屏幕阅读器标题阅读-->
+    <span style="font-size: 32px; margin: 21px 0; display: block;">这是顶级标题吗？</span>
+    <!--span元素，用于包裹文本，可以设置字体大小、边距、显示方式等样式。span元素不是语义元素，无法为文本赋予任何语义含义-->
     <p>This is a paragraph.</p><!-- 段落 -->
     <p>
         <em>This is an emphasized text.</em><!-- 斜体字 -->
@@ -79,6 +89,10 @@
     <!--布尔元素的三种定义方式：只写属性名disabled、属性名="任意值"、属性名、属性名=""-->
     description&lt;meat&gt;元素和&lt;title&gt;元素都会出现在搜索结果中
     <img src="../images/mdn-search-result.png" alt="MDN search result." width="800" height="400"/>
+    <p>Japanese example: <span lang="ja">ご飯が熱い。</span>.</p>
+    <p>Chinese example: <span lang="zh-CN">热乎。</span>.</p>
+    <p>Korean example: <span lang="ko">도시락이 매우 싫다.</span>.</p>
+    <!--可以把文档分段设置为不同的语言，lang属性指定了元素的语言，可以帮助搜索引擎更好地索引和分类文档-->
 </body>
 </html>
 <!--html元素，也称为根元素，包含页面上所有的内容-->
