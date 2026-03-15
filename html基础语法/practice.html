@@ -33,6 +33,12 @@
     <p>
         <em>This is an emphasized text.</em><!-- 斜体字 -->
         <strong>This is a strong text.</strong><!-- 粗体字 -->
+        <mark>This is a marked text.</mark><!-- 下划线标记文本 -->
+        <!--stong,em和mark元素都是语义元素，可以用来表示强调和着重强调的文本，会被屏幕阅读器等识别。如果纯文本风格而不添加任何语义辅助要用span元素和一些CSS，或<i>，<b>和<u>等元素-->
+        <i>This is an italic text.</i><!-- 斜体字 -->
+        <b>This is a bold text.</b><!-- 粗体字 -->
+        <u>This is an underlined text.</u><!-- 下划线文本 -->
+        <!--<i>,<b>和<u>时旧式的元素，仅有表象功能不具语义，称为表观元素，不符合无障碍理念-->
         <a href="https://www.google.com">This is a link to Google.</a><!-- 超链接 -->
         <img src="../images/end.png" alt="This is an image." width="1920" height="1080"/><!-- 图片 --> 
         <!--空元素，只有一个标签，用于在文档中插入/嵌入某些东西-->
@@ -93,6 +99,124 @@
     <p>Chinese example: <span lang="zh-CN">热乎。</span>.</p>
     <p>Korean example: <span lang="ko">도시락이 매우 싫다.</span>.</p>
     <!--可以把文档分段设置为不同的语言，lang属性指定了元素的语言，可以帮助搜索引擎更好地索引和分类文档-->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <!--ul元素，用于创建无序列表，li元素，用于创建列表项，li元素可以嵌套在ul或ol元素中-->
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li> 
+        <li>Item 3</li>
+    </ol>
+    <!--ol元素，用于创建有序列表，li元素，用于创建列表项，li元素可以嵌套在ul或ol元素中-->
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>
+            <ul>
+                <li>Subitem 1</li>
+                <li>Subitem 2</li>
+            </ul>
+        </li>
+    </ol>
+    <!--子列表可以嵌套在父列表中，子列表的缩进可以更好地体现层级关系-->
+    <dl>
+        <dt>Term 1</dt>
+        <dd>Definition 1</dd>
+        <dt>Term 2</dt>
+        <dd>Definition 2</dd>
+        <dt>Term 3</dt>
+        <dd>
+            <ol>
+                <li>Subterm 1</li>
+                <li>Subterm 2</li>
+            </ol>
+        </dd>
+        <!--dd元素可以包含子列表，子列表可以是有序的或无序的-->
+        <dt>Term 4</dt>
+        <dd>Definition 4</dd>
+        <dd>Definition 5</dd>
+        <!--dd元素可以包含多个定义，每个定义会另起一行-->
+    </dl>
+    <!--dl元素，用于创建描述列表，dt元素，用于创建描述项的标题，dd元素，用于创建描述项的内容-->
+    <!--浏览器的默认样式会在描述列表的术语及其定义之间产生缩进。-->
+    <p><code>This is a code snippet.</code>
+    code元素,是 HTML 中的一个短语元素，用于定义计算机代码文本。它的主要作用是语义化地标记代码片段，便于浏览器、搜索引擎和辅助技术理解内容的类型。</p>
+    <p>
+    <strong>HTML <code>&lt;blockquote&gt;</code> 元素</strong>（或<em
+        >HTML 块级引用元素</em
+    >）表示所附文本为扩展引用。
+    </p>
+    <p>这是块引用：</p>
+    <blockquote
+    cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/blockquote">
+    <p>
+        <strong>HTML <code>&lt;blockquote&gt;</code> 元素</strong>（或<em
+        >HTML 块级引用元素</em
+        >）表示所附文本为扩展引用。
+    </p>
+    </blockquote>
+    <p>
+    引用元素 <code>&lt;q&gt;</code> 是<q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q">用于不需要段落分隔的短引用。</q>
+    </p>
+    <!--q元素，用于创建短引用，cite属性可用于指定引用的来源。-->
+    <!--cite属性可用于指定引用的来源，可以帮助搜索引擎更好地索引和分类文档。但cite属性没有被充分利用，如果不使用
+    javascript或CSS来编写自己的解决方，就没法让步浏览器显示cite的内容-->
+    <!--如果想在页面上提供引文的来源，需要在文本中通过连接或其他方式来提供-->
+    <p>
+    引用元素 <code>&lt;q&gt;</code> 是<q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q">用于不需要段落分隔的短引用。</q>——<a href="/zh-CN/docs/Web/HTML/Element/q"> <cite>MDN q 页面</cite></a>
+    </p>
+    <!--cite元素，默认字体样式为斜体，可以用来表示引文的来源，但需要用链接等方式来包含引用资源-->
+    <p><abbr title="HyperText Markup Language">HTML</abbr> 是一种用于创建网页的标记语言。</p>
+    <!--abbr元素，用于创建缩写词或首字母缩写，title属性指定了完整词汇的全称，浏览器会显示title内容作为鼠标悬停时的提示信息-->
+    <address>
+        <p>Mozilla Foundation<br>
+            1981 Landings Drive<br>
+            Building K<br>
+            <a href="12345@example.com">12345@example.com</a>
+            <br>
+    </address>
+    <!--address元素，是html中的一个语义化元素，用于表示作者、联系信息、作者相关信息等。大多数浏览器会给address元素加上斜体字和缩进。-->
+    <p>我的生日是在 2021 年 5 月 25 日（译者注：英文原文为 25<sup>th</sup>）</p>
+    <p>
+    咖啡因的化学方程式是 C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>。
+    </p>
+    <p>如果 x<sup>2</sup> 的值为 9，那么 x 的值必为 3 或 -3。</p>
+    <!--sub元素，用于创建下标，sup元素，用于创建上标。在化学式和数学公式中，sub和sup元素经常被用来表示下标和上标。-->
+    <p>
+        用来表示计算机代码的元素
+        <ul>
+            <li><code>&lt;code&gt;</code> 元素,标记计算机通用代码</li>
+            <li><code>&lt;pre&gt;</code> 元素，用于保留空白字符，该元素中的文本会以与文本编辑器中相同的格式出现，一般在嵌套最外层</li>
+            <li><code>&lt;kbd&gt;</code> 元素，用于标记输入电脑的键盘（或其他类型）输入</li>
+            <li><code>&lt;samp&gt;</code> 元素，用于标记计算机程序的输出</li>
+            <li><code>&lt;var&gt;</code> 元素，用于标记具体变量名</li>
+        </ul>
+    </p>
+    <p>
+        <time datetime="2021-05-25">2021 年 5 月 25 日</time>
+        <!--time元素，用于标记日期和时间，datetime属性指定了日期和时间的具体值，浏览器会根据该值显示日期和时间。-->
+        <tine datetime="2021-05">2021 年 5 月</tine>
+        <!--只含有年月-->
+        <tine datetime="2021">2021 年</tine>
+        <!--只含有年份-->
+        <tine datetime="2021-W04">2021 年 2 月 15 日</tine>
+        <!--只含有年份和特定周-->
+        <tine datetime="05-25">2021 年 5 月 25 日</tine>
+        <!--只含有月日-->
+        <time datetime="12:00">12:00</time>
+        <!--只含有时间-->
+        <time datetime="12:00:01.856">12:00:01.856</time>
+        <!--含有秒和毫秒的日期和时间。-->
+        <time datetime="2021-05-25T12:00:00">2021 年 5 月 25 日 12:00:00</time>
+        <!--日期和时间。-->
+        <time datetime="2021-05-25T12:00:00-08:00">2021 年 5 月 25 日 12:00:00 PST</time>
+        <!--含有时区偏移值的日期和时间。-->
+       
+    </p>
+    </p>
 </body>
 </html>
 <!--html元素，也称为根元素，包含页面上所有的内容-->
